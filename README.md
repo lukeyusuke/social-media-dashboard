@@ -1,5 +1,5 @@
 <h1>🌐 Social-Media-Dashboard</h1> 
-Em construção... 🚧  <br/>
+Finalizado ✅  <br/>
 <a href="#sobre">Sobre</a> 
 <a href="#tecnologias">Tecnologias</a> 
 <a href="#autor">Autor</a>  
@@ -34,5 +34,5 @@ Em construção... 🚧  <br/>
  
 <div>   
 <a href="mailto:lukedev09@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">      
-<a href="https://www.linkedin.com/in/luke-yusuke-800a32209/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"> 
+<a href="https://www.linkedin.com/in/luke-yusuke-800a32209/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
 </div>
