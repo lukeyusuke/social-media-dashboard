@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
 :root{
+    --dark-gray: rgba(177, 169, 169, 0.8);
     --weight: 600;
+    --spacing-size-one: .25em;
+    --spacing-size-two: 1em;
+    --spacing-size-three: 2em;
 }
 
 .line-x{
@@ -10,7 +14,7 @@
 
 .bxs-up-arrow,
 .bxs-down-arrow{
-    padding-right: 5px;
+    padding-right: var(--spacing-size-one);
 }
 
 span{
@@ -41,31 +45,23 @@ body.dark{
     background-color: #191c25;
 }
 
-body.dark .media-followers,
-body.dark .page-view-content{
-    background-color: #25293E;
-    box-shadow: 0 0 0 0;
-}
-
 body.dark .followers-number,
-body.dark .page-view-content span:first-child,
-body.dark h3,
+body.dark .page-view-content,
+body.dark .title-page-view,
 body.dark h2{
     color: #fff;
 }
 
 .checkbox{
     opacity: 0;
-    position: absolute;
 }
 
 .label{
+    display: flex;
     align-items: center;
     background-color: rgba(151, 148, 148, 1);
-    border-radius: 2em;
-    display: flex;
-    margin-left: .5em;
-    padding: 5px;
+    border-radius: var(--spacing-size-two);
+    padding-left: var(--spacing-size-one);
     height: 30px;
     width: 60px;
 }
@@ -77,30 +73,30 @@ body.dark .label{
 .ball{
     width: 22px;
     height: 22px;
-    border-radius: 50px;
+    border-radius: var(--spacing-size-two);
     background-color: #fff;
     transition: all .2s linear;
 }
 
 body.dark .ball{
-    background-color:rgb(71, 71, 71)
+    background-color:rgb(71, 71, 71);
 }
 
 .checkbox:checked + .label .ball{
-    transform: translateX(1.75em);
+    transform: translateX(1.85em);
 }
 
 .followers{
-    color: rgba(177, 169, 169, 0.8);
+    color: var(--dark-gray);
     font-weight: var(--weight);
 }
 
 body.dark .content-dark-mode{
-    color: rgba(177, 169, 169, 0.8);
+    color: var(--dark-gray);
 }
 
 .media-content-one{
-    margin: 2em 0 3em 0;
+    margin: var(--spacing-size-three) 0 3em 0;
 }
 
 .media-followers{
@@ -109,25 +105,25 @@ body.dark .content-dark-mode{
     text-align: center;
     height: 250px;
     width: 265px;
-    box-shadow: 1px 1px 10px 0 rgba(177, 169, 169, 0.8);
 }
 
-body.dark .media-followers:hover,
-body.dark .page-view-content:hover{
-    box-shadow: 1px 1px 10px 0 rgba(71, 71, 71, 0.8);
-}
-
-.media-followers, .page-view-content{
+.media-followers, 
+.page-view-content{
     transition: all .5s ease;
-}
-
-.media-followers-one{
-    border-top: 4px solid #0e90f2;
 }
 
 .media-followers:hover,
 .page-view-content:hover{
-    box-shadow: 1px 1px 10px 0 rgb(105, 105, 105);
+    box-shadow: 1px 1px 10px 0 rgb(71, 71, 71);
+}
+
+body.dark .media-followers,
+body.dark .page-view-content{
+    background-color: #25293E;
+}
+
+.media-followers-one{
+    border-top: var(--spacing-size-one) solid #0e90f2;
 }
 
 .media-followers-one i,
@@ -136,7 +132,7 @@ body.dark .page-view-content:hover{
 }
 
 .media-followers-two{
-    border-top: 5px solid #1d9bf0;
+    border-top: var(--spacing-size-one) solid #1d9bf0;
 }
 
 .media-followers-two i,
@@ -145,7 +141,7 @@ body.dark .page-view-content:hover{
 }
 
 .media-followers-three{
-    border-top: 5px solid red;
+    border-top: var(--spacing-size-one) solid red;
     border-image: -webkit-gradient(linear, right top, left top,
     from(#ff4b2b), to(#ff416c));
     border-image-slice: 1;
@@ -155,11 +151,11 @@ body.dark .page-view-content:hover{
 .page-view-content-two .bxl-instagram{
     color: transparent;
     background: linear-gradient(#ff4b2b, #ff416c);
-    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .media-followers-four{
-    border-top: 5px solid #E60023;
+    border-top: var(--spacing-size-one) solid #E60023;
 }
 
 .media-followers-four i,
@@ -171,17 +167,17 @@ body.dark .page-view-content:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    padding-top: 1em;
+    gap: var(--spacing-size-one);
+    padding-top: var(--spacing-size-two);
 }
 
 .social-media-name{
-    color: rgba(177, 169, 169, 0.8);
+    color: var(--dark-gray);
     font-weight: var(--weight);
 }
 
 .content-followers{
-    padding: 2em 0 2.25em 0;
+    padding: var(--spacing-size-three) 0 var(--spacing-size-one) 0;
 }
 
 .followers-number{
@@ -190,8 +186,8 @@ body.dark .page-view-content:hover{
 }
 
 .subtitle-followers{
-    color: rgba(177, 169, 169, 0.8);
-    letter-spacing: 5px;
+    color: var(--dark-gray);
+    letter-spacing: .5em;
 }
 
 .plus-followers{
@@ -206,44 +202,43 @@ body.dark .page-view-content:hover{
 
 /* ------ MEDIA CONTENT TWO ------*/
 .title-page-view{
-    margin-bottom: 1em;
+    margin-bottom: var(--spacing-size-two);
 }
 
 .page-view-content{
     background-color: #F0F2FA;
     border-radius: .5em;
-    box-shadow: 1px 1px 10px 0 rgba(177, 169, 169, 0.8);
     margin: .5em auto;
     padding: 0 1.5em;
     height: 150px;
-    width: 265px;
+    width: 270px;
 }
 
 .page-view-content h3{
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .page-view-content div:first-child{
-    margin: 2em 0;
+    margin: var(--spacing-size-three) 0;
 }
 
 .page-view-content div:last-child .bx,
 .media-followers .flex-media .bxs-up-arrow{
     color: #31af4f;
-    font-size: 1em;
+    font-size: var(--spacing-size-two);
 }
 
 .page-view-content-four div:last-child .bx,
 .page-view-content-one div:last-child .bxs-down-arrow,
 .media-followers .flex-media .bxs-down-arrow{
     color: #e73f3f;
-    font-size: 1em;
+    font-size: var(--spacing-size-two);
 }
 
 @media(max-width: 754px){
 
     .content-dashboard{
-        padding: 2em;
+        padding: var(--spacing-size-three);
     }
 
     .media-followers,
@@ -254,8 +249,8 @@ body.dark .page-view-content:hover{
     .line-x{
         opacity: 1;
         width: 100%;
-        margin: 1em 0;
-        background-color: rgba(177, 169, 169, 0.8);
+        margin: var(--spacing-size-two) 0;
+        background-color: var(--dark-gray);
     }
 
     .content-dark-mode{
